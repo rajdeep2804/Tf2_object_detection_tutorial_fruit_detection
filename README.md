@@ -104,7 +104,7 @@ The weights directory will contain 2 folders; saved_model and checkpoint. The sa
 - Make folder by name `images`, where you can place all the test images for inference.
 - Run `Object_detection_tf2` notebook for inferencing the images.
 <p float="left">
-<img src="data/output_images/11_apple_.jpg" width="240" height="320"/>
-<img src="data/output_images/23_banana_.jpg" width="240" height="320"/>
-<img src="data/output_images/39_orange_.jpg" width="240" height="320"/>
+<img src="data/output_images/11_apple_.jpg" width="240" height="240"/>
+<img src="data/output_images/23_banana_.jpg" width="240" height="240"/>
+<img src="data/output_images/39_orange_.jpg" width="240" height="240"/>
 </p> <br/>
