@@ -92,7 +92,11 @@ Note that running the evaluation script along with the training requires another
 ```bash
 tensorboard --port 6004 --logdir= .
 ```
-
+<p float="left">
+<img src="data/eval_output/fruit_loss.png" width="240" height="240"/>
+<img src="data/eval_output/fruit_pre.png" width="240" height="240"/>
+<img src="data/eval_output/fruit_recal.png" width="240" height="240"/>
+</p> <br/> 
 ## Exporting your trained model for inference
 When the training is done, Tensorflow saves the trained model as a checkpoint. Now we will see how to export the models to a format that can be used for inference, this final format usually called saved model or frozen model.
 ```bash 
