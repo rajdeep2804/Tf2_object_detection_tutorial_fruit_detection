@@ -68,7 +68,7 @@ python3 generate_tfrecord.py --path_to_images data_gen/data_images/test --path_t
         }
     }
     ``` 
-* Prepare the labelmap according to your data, the [labelmap file](models/raccoon_labelmap.pbtxt) contains:
+* Prepare the labelmap according to your data, the [labelmap file](data/fruit.pbtxt) contains:
 
 ```
 item {
@@ -85,12 +85,14 @@ python3 model_main_tf2.py --pipeline_config_path ssd_mobilenet_v2.config --model
 ```bash
 python3 model_main_tf2.py --pipeline_config_path ssd_mobilenet_v2.config --model_dir training/train --checkpoint_dir training/train
 ```
+
 Note that running the evaluation script along with the training requires another GPU dedicated for the evaluation. So, if you don't have enough resources, you can ignore running the validation script, and run it only once when the training is done. However, you can run the evaluation on the CPU, while the training is running on the GPU. Simply by adding this flag before running the evaluation script export `CUDA_VISIBLE_DEVICES="-1"`, which makes all the GPUs not visible for tensoflow, so it will use the CPU instead.
 * Visualising model on Tensorboard :
 `cd training/train/eval`
 ```bash
-tensorboard --port 6004 --logdir=
+tensorboard --port 6004 --logdir= .
 ```
+
 ## Exporting your trained model for inference
 When the training is done, Tensorflow saves the trained model as a checkpoint. Now we will see how to export the models to a format that can be used for inference, this final format usually called saved model or frozen model.
 ```bash 
